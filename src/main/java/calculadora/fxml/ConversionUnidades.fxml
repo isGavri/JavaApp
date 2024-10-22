@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadora.model.ConversionUnidades">
+    <AnchorPane layoutY="44.0" prefHeight="400.0" prefWidth="600.0">
+        <children>
+            <AnchorPane layoutY="111.0" prefHeight="301.0" prefWidth="600.0">
+                <children>
+                    <GridPane prefHeight="123.0" prefWidth="600.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label alignment="CENTER" prefHeight="30.0" prefWidth="153.0" text="Sistema De Entrada:" textAlignment="CENTER" />
+                            <MFXButton onAction="#setMIn" prefHeight="25.0" prefWidth="100.0" text="Metros" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                            <MFXButton onAction="#setCMIn" prefHeight="25.0" prefWidth="100.0" text="Centimetros" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                            <MFXButton onAction="#setKMIn" prefHeight="25.0" prefWidth="100.0" text="Kilometros" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                            <MFXButton onAction="#setYIn" prefHeight="25.0" prefWidth="100.0" text="Yarda" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                     <MFXButton onAction="#setPIn" prefHeight="25.0" prefWidth="100.0" text="Pie" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                     <MFXButton onAction="#setInIn" prefHeight="25.0" prefWidth="100.0" text="Pulgada" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        </children>
+                    </GridPane>
+               <GridPane layoutY="142.0" prefHeight="190.0" prefWidth="610.0">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                     <Label alignment="CENTER" prefHeight="30.0" prefWidth="153.0" text="Sistema De Entrada:" textAlignment="CENTER" />
+                     <MFXButton onAction="#setMOut" prefHeight="25.0" prefWidth="100.0" text="Metros" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                     <MFXButton onAction="#setCMOut" prefHeight="25.0" prefWidth="100.0" text="Centimetros" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                     <MFXButton onAction="#setKMOut" prefHeight="25.0" prefWidth="100.0" text="Kilometros" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                     <MFXButton onAction="#setYOut" prefHeight="25.0" prefWidth="100.0" text="Yarda" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                     <MFXButton onAction="#setPOut" prefHeight="25.0" prefWidth="100.0" text="Pie" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                     <MFXButton onAction="#setInOut" prefHeight="25.0" prefWidth="100.0" text="Pulgada" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  </children>
+               </GridPane>
+                </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="606.0">
+                <children>
+                    <AnchorPane prefHeight="100.0" prefWidth="267.0">
+                        <children>
+                            <TextField fx:id="inputText" prefHeight="100.0" prefWidth="267.0" promptText="Input " />
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="100.0" prefWidth="267.0">
+                        <children>
+                            <TextField fx:id="outputText" editable="false" prefHeight="100.0" prefWidth="267.0" />
+                        </children>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <children>
+                            <MFXButton layoutX="9.0" layoutY="50.0" onAction="#convertir" text="Convertir" />
+                        </children>
+                    </AnchorPane>
+                </children>
+            </HBox>
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
